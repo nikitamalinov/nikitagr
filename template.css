@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family-Montserrat:500');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+ /* background-color: #F4FEFC*/
+}
+
+li, a, button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+
+.logo, .logo-a {
+  cursor: pointer;
+  margin-right: auto;
+  max-width: 23%;
+}
+
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: #0088a9;
+}
+a.active {
+  color: #0088a9;
+}
+
+.connect-wallet {
+  margin-left: 20px;
+  padding: 9px 25px;
+  border:none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: black;
+  background-color: rgb(255, 110, 126, 1);
+  /*float: right;
+  left: auto;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 12px 18px;
+  border-radius: 25px;
+  background-color: #FFC0C7;
+*/
+}
+
+.connect-wallet:hover {
+  /*box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);*/
+  background-color: rgb(255, 110, 126, .85)
+}
+
+
+
+
+
+
+
+/*
+.market-sum {
+    overflow: hidden;
+    background-color: black;
+}
+                         /* make it evenly spaced later with inline and width ~14.3*/ /*
+  .market-sum a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+}
+*/
