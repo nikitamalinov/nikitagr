@@ -4,18 +4,22 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
   <meta name="author" content="Nikita Malinovsky"/>
   <title>Nikita's Aggregator </title>
-  <link rel="stylesheet" type="text/css" href="/index.css">
+  <link rel="stylesheet" type="text/css" href="/template.css">
   <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
 </head>
 <body> 
 
-<div class="topnav">
-  <a class="active" href="/">Nikita</a>
-  
-  <a href="/crypto">Crypto</a>
-  <a href="/speedtyping">Speed Typing</a> 
-  <a href="/about" id="about">About</a>
-</div>
+  <header>
+    <a class="logo-a" href="/"><img class="logo" src="../favicon.png"></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/crypto">Crypto</a></li>
+          <li> <a href="/speedtyping">Speed Typing</a> </li>
+          <li><a href="/about" id="about">About</a></li>
+        </ul>
+      </nav>
+    <button class="connect-wallet" onClick={connect()} >Connect to MetaMask</button>
+    </header>
 
 <!--
 <div class="market-sum">
@@ -29,7 +33,7 @@
 </div>
 -->
 <div class="main">
-  <h1 class="heading">Welcome To Nikita's Aggregator</h1>
+  <h1 class="heading" style="color:white; text-align: center">Welcome To Nikita's Aggregator</h1>
 
 </div>
 
