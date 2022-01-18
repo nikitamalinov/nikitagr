@@ -5,33 +5,32 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
   <meta name="author" content="Nikita Malinovsky"/>
   <title>Crypto </title>
-  <link rel="stylesheet" type="text/css" href="/crypto/styles.css">
+  <link rel="stylesheet" type="text/css" href="/template.css">
   <script src="script.js" defer></script>
-  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
 
 <title>Crypto</title>
 </head>
 
 <body>
-
-  <div class="topnav">
-    <a href="/">Nikita</a>
-    <a href="/crypto" class="active">Crypto</a>
-    <a href="/speedtyping">Speed Typing</a> 
+  <header>
+    <a class="logo-a" href="/"><img class="logo" src="../favicon.png"></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/crypto" class="active">Crypto</a></li>
+          <li> <a href="/speedtyping">Speed Typing</a> </li>
+          <li><a href="/about" id="about">About</a></li>
+        </ul>
+      </nav>
     <button class="connect-wallet" onClick={connect()} >Connect to MetaMask</button>
-    <a href="/about" id="about">About</a>
-  </div>
+    </header>
 
 
 <div class="main">
-  <h1 class="heading">Crypto</h1>
+  <h1 class="heading" style="color:white; text-align: center">Crypto</h1>
 </div>
 
   <!--{active ? <span>Connected with <b>{account}</b></span> : <span>Not connected</span>}-->
-
-
-
-
 </body>
 
 </html>
