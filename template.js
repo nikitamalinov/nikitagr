@@ -13,10 +13,18 @@ function connect() {
 
 const accountChangedHandler = (newAccount) => {
   console.log("new acc: " + newAccount) 
-  btn =document.getElementById("connectWallet")
-  btn.innerHTML = newAccount; //display the network too
-  btn.classList.remove("connect-wallet")
-  btn.classList.add("connected-wallet")
+  
+  try{
+    btn = document.getElementById("connectWallet")
+    btn.innerHTML = newAccount; //display the network too
+    btn.classList.remove("connect-wallet")
+    btn.classList.add("connected-wallet")
+  }  
+  catch(error)
+  {
+
+  }
+  
 
 
 }
