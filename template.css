@@ -37,6 +37,7 @@ header {
 
 .nav-links li {
   display: inline-block;
+  overflow: hidden;
   padding: 0px 20px;
 }
 
@@ -77,24 +78,15 @@ a.active {
   background-color: rgb(255, 110, 126, .85)
 }
 
+.connected-wallet {
+  margin-left: 20px;
+  padding: 9px 25px;
+  border:none;
+  color: black;
+  background-color: rgb(255, 110, 126, 1);
 
-
-
-
-
-
-/*
-.market-sum {
-    overflow: hidden;
-    background-color: black;
 }
-                         /* make it evenly spaced later with inline and width ~14.3*/ /*
-  .market-sum a {
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 14px;
+
+.connected-wallet:hover {
+ /* background-color: rgb(255, 110, 126, .85) nothing for now */
 }
-*/
