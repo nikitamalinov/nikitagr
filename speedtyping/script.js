@@ -5,6 +5,8 @@ const timerElement = document.getElementById('timer')
 const btn = document.getElementById("btn")
 var runProgram = false
 quoteInput.disabled = true;
+let countLetters = 0
+
  
 btn.addEventListener("click", updateBtn);
 
@@ -25,14 +27,17 @@ quoteInput.addEventListener('input', () => {
     } else if (character === characterSpan.innerText) {
       characterSpan.classList.add('correct')
       characterSpan.classList.remove('incorrect')
+      countLetters++
     } else {
       characterSpan.classList.remove('correct')
       characterSpan.classList.add('incorrect')
       correct = false
     }
   })
-  //if everything is correct, start new quote
-  if (correct) renderNewQuote()
+  //if everything is correct, stop game
+  if (correct) {
+    disableInput()
+  }
 })
 
 function getRandomQuote() {
@@ -65,17 +70,17 @@ function startTimer() {
   setInterval(() => {
     //set text to time we got
   if(runProgram == false){
-    timerElement.innerText = "Time Left: 60"
     return;
   }    
-
-    timer.innerText = "Time Left: " + (60 - getTimerTime())
+    //create parent grid element for timer time and wpm and accuracy
+    timer.innerText = "Time Left: " + (60 - getTimerTime()) //+"   WPM: " + countLetters/getTimerTime()
     if(timer.innerText === "Time Left: 0"){
-      timerElement.innerText = "Time Left: 60"
-      renderNewQuote()
+      
+      timerElement.innerText = "Time Left: 60"//   WPM: 0"
+      disableInput()
     }
 
-  }, 1000)
+  }, 500)
 }
 
 //get time in seconds
@@ -86,19 +91,29 @@ function getTimerTime() {
 
 function updateBtn() {
   if(btn.innerHTML === "Start"){
+    enableInput()
+  }
+  else{
+    disableInput()
+  }
+}
+
+  function disableInput() {
+    quoteInput.disabled = true;
+    runProgram = false
+    btn.innerHTML = "Start"
+  }
+
+  function enableInput() {
     quoteInput.disabled = false;
     quoteInput.focus()
     runProgram = true
     renderNewQuote()
     btn.innerHTML = "End"
   }
-  else{
-    quoteInput.disabled = true;
-    runProgram = false
-    btn.innerHTML = "Start"
-  }
 
 
-}
+
+
 
 
